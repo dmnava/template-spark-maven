@@ -1,7 +1,8 @@
 package com.stratio.spark.sample
 
 import org.apache.log4j.Logger
-import org.apache.spark.sql.{Dataset, SparkSession}
+import org.apache.spark.sql.SparkSession
+import scopt.OptionParser
 
 object SampleSparkApp {
 
@@ -16,7 +17,7 @@ object SampleSparkApp {
 
     logger.info("Running Spark App")
     // TODO implement app
-    
+
 
   }
 }

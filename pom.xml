@@ -28,47 +28,54 @@
     <scala.binary.version>2.11</scala.binary.version>
     <scalatest.version>2.2.5</scalatest.version>
     <spark.version>2.1.0</spark.version>
+    <scopt.version>3.6.0</scopt.version>
   </properties>
 
-  <dependencyManagement>
-    <dependencies>
-        <!-- Self dependencies. Add the modules to be reused from others -->
-        <dependency>
-            <groupId>com.stratio.spark.sample</groupId>
-            <artifactId>sample-module</artifactId>
-            <version>${project.version}</version>
-        </dependency>
+    <dependencyManagement>
+        <dependencies>
+            <!-- Self dependencies. Add the modules to be reused from others -->
+            <dependency>
+                <groupId>com.stratio.spark.sample</groupId>
+                <artifactId>sample-module</artifactId>
+                <version>${project.version}</version>
+            </dependency>
 
-        <!-- 3PT Libraries. Look for their Maven coordinates in search.maven.org-->
-	<dependency>
-	    <groupId>org.scala-lang</groupId>
-	    <artifactId>scala-library</artifactId>
-	    <version>${scala.version}</version>
-	    </dependency>
-        <dependency>
-            <groupId>org.apache.spark</groupId>
-            <artifactId>spark-core_2.11</artifactId>
-            <version>${spark.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.spark</groupId>
-            <artifactId>spark-sql_2.11</artifactId>
-            <version>${spark.version}</version>
-        </dependency>
-        <dependency>
-	   <groupId>org.scalatest</groupId>
-	   <artifactId>scalatest_${scala.binary.version}</artifactId>
-	   <version>${scalatest.version}</version>
-	   <scope>test</scope>
-        </dependency>
-        <dependency>
-	   <groupId>junit</groupId>
-	   <artifactId>junit</artifactId>
-	   <version>4.12</version>
-	   <scope>test</scope>
-        </dependency>
-     </dependencies>
-   </dependencyManagement>
+            <!-- 3PT Libraries. Look for their Maven coordinates in search.maven.org-->
+            <dependency>
+                <groupId>org.scala-lang</groupId>
+                <artifactId>scala-library</artifactId>
+                <version>${scala.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-core_2.11</artifactId>
+                <version>${spark.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-sql_2.11</artifactId>
+                <version>${spark.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.scopt</groupId>
+                <artifactId>scopt_2.11</artifactId>
+                <version>${scopt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.scalatest</groupId>
+                <artifactId>scalatest_${scala.binary.version}</artifactId>
+                <version>${scalatest.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
+                <scope>test</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
   <build>
       <plugins>
           <plugin>
