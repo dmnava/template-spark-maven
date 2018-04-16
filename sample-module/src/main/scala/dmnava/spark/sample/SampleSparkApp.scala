@@ -1,4 +1,4 @@
-package com.stratio.spark.sample
+package dmnava.spark.sample
 
 import org.apache.log4j.Logger
 import org.apache.spark.sql.SparkSession
